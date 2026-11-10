@@ -14,6 +14,27 @@ Based on the prior work of [ReVanced](https://github.com/ReVanced/revanced-patch
 ## Patches
 
 <!-- PATCHES_START EXPANDED -->
+> **[v1.0.0](https://github.com/saadbinyousaf1/sby-patches/releases/tag/v1.0.0)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;4 patches total
+<details open>
+<summary>📦 foodpanda&nbsp;&nbsp;•&nbsp;&nbsp;4 patches</summary>
+<br>
+
+**Package name:** `com.global.foodpanda.android`
+
+**🎯 Supported versions:**
+
+| 26.44.0 |
+| :---: |
+
+| 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
+|----------|----------------|-----------|
+| [Bypass anti-tamper (foodpanda)](#bypass-anti-tamper-foodpanda) | Bypasses foodpanda's DeliveryHero MAS integrity block so re-signed / sideloaded builds no longer hit the "This device or application is not supported" screen. Required. |  |
+| [Force dark mode](#force-dark-mode) | Repaints foodpanda's built-in light colour constants with dark equivalents so the app runs in a real dark theme. Palette classes are located by their colour constants, so the patch survives obfuscation renames. The foodpanda pink brand colour is kept. |  |
+| [Remove ads](#remove-ads) | Removes foodpanda's adtech banner ads (order-tracking, home, discovery, reels) and suppresses the forced PandaMart cross-sell / grocery upsell popup. |  |
+| [Spoof signature (maps fix)](#spoof-signature-maps-fix) | Experimental. Redirects PackageManager.getPackageInfo so the app reports foodpanda's original signing certificate, which can restore Google Maps on re-signed builds. May not work because Google Play Services verifies the installed signature out of process. |  |
+
+</details>
+
 <!-- PATCHES_END -->
 
 ## The maps caveat
