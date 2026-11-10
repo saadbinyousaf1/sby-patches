@@ -1,11 +1,11 @@
 // © https://saadbinyousaf.dev/ © //
 package dev.sby.patches.foodpanda
 
+import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.replaceInstruction
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patcher.util.matchAllMethodIndicesForEach
 import app.morphe.patcher.util.registersUsed
-import com.android.tools.smali.dexlib2.iface.instruction.Instruction
 import dev.sby.patches.shared.Constants.COMPATIBILITY_FOODPANDA
 
 private const val EXTENSION_CLASS = "Ldev/sby/patches/extension/SignatureSpoofPatch;"
@@ -26,7 +26,7 @@ val signatureSpoofPatch = bytecodePatch(
     // © https://saadbinyousaf.dev/ © //
     execute {
         getPackageInfoFingerprint.matchAllMethodIndicesForEach(requireMatches = false) { index ->
-            val instruction = getInstruction<Instruction>(index)
+            val instruction = getInstruction(index)
             val registers = instruction.registersUsed
             if (registers.size == 3) {
                 val (manager, packageName, flags) = registers
