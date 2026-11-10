@@ -41,8 +41,3 @@ Locally (requires a GitHub token with `read:packages` for the Morphe registry):
 ```
 ./gradlew :patches:buildAndroid
 ```
-
-## Credits
-
-- [ReVanced](https://github.com/ReVanced/revanced-patches) — original patcher work (GPLv3)
-- [Morphe](https://github.com/MorpheApp) — patcher framework and ecosystem
