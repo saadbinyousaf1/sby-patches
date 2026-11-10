@@ -10,10 +10,11 @@ object Constants {
     val COMPATIBILITY_FOODPANDA = Compatibility(
         packageName = "com.global.foodpanda.android",
         name = "foodpanda",
-        apkFileType = ApkFileType.APKS,
-        appIconColor = 0xFFD70F64.toInt(),
+        apkFileType = ApkFileType.APK_REQUIRED,
+        appIconColor = 0xD70F64,
+        signatures = emptySet(),
         targets = listOf(
-            AppTarget(version = "26.44.0"),
+            AppTarget(version = "26.44.0", minSdk = 29),
         ),
     )
 }
