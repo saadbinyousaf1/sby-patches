@@ -13,12 +13,8 @@ Based on the prior work of [ReVanced](https://github.com/ReVanced/revanced-patch
 
 ## Patches
 
-| Patch | Default | What it does |
-|-------|:---:|--------------|
-| **Bypass anti-tamper** | ✅ | Skips DeliveryHero's MAS integrity check so the re-signed build opens instead of hitting the "device not supported" screen. Required for every patched build. |
-| **Remove ads** | ✅ | Empties the adtech banner feed (home, order-tracking, discovery, reels) and suppresses the PandaMart cross-sell / grocery upsell popup. |
-| **Force dark mode** | ⬜ | Rewrites foodpanda's baked-in light colour constants to dark equivalents. Palette classes are found by their colours, not by name, so it survives obfuscation. Off by default — enable it in Morphe Manager. |
-| **Spoof signature (maps fix)** | ⬜ | **Experimental.** Redirects `getPackageInfo` so the app reports foodpanda's original certificate, which *may* restore Google Maps on re-signed builds. See the note below. |
+<!-- PATCHES_START EXPANDED -->
+<!-- PATCHES_END -->
 
 ## The maps caveat
 
